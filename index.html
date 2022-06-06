@@ -1,0 +1,57 @@
+<!--Set DOCTYPE to html-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--include external javascript file script.js for the compute and updateRate functions-->
+    <script src="script.js"></script>
+        <!--include external css file style.css for background colors, div and span styles-->
+    <link rel="stylesheet" href="style.css">
+        <title>Web App - Simple Interest Calculator</title>
+    </head>
+    <body>
+    <!--main div to separate the calculator from the black page background -->
+    <div class="maindiv">
+        <h1>Simple Interest Calculator</h1>
+        <!--inner div to help adjust padding around the input fields of the form -->
+        <div class="innerdiv">
+            <!--Investment amount entered by the user takes numbers only (see compute() in script.js) -->
+            Amount <input type="number"  id="principal">  <br><br>
+            <!--Range input allows the user to set range of interest between 1-20 (onchange calls updateRate()
+            in script.js to set the innerHTML of the span id=rate_val to the selection of the user-->
+            Interest Rate <input onchange="updateRate()"
+                        type="range"  id="rate" min=1 max=20 step=0.25 val=10.25>
+
+            <span id="rate_val">10.25%</span>  <br><br>
+            <!--Range input select so the user can select a number of years between 1 and 10-->
+            No. of Years <select id="years">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>  <br><br>
+
+            <!--Compute Interest Button calls compute() in script.js after onclick is triggered. If valid input,
+            the calculated interest is displayed in the innerHTML of the below span id "result". The user's entries
+            and the calculated interest results are all highlighted yellow by compute()-->
+            <button onclick="compute()">Compute Interest</button><br><br>
+            <span id="result">
+
+            </span><br><br>
+    </div>
+        <!--Add Copyright in the footer section-->
+        <footer>
+
+            &#169; Everyone Can Get Rich<br>
+            This Calculator belongs to Joel Foust
+
+
+        </footer>
+    </div>
+    </body>
+</html>

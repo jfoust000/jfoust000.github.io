@@ -1,0 +1,48 @@
+/*Set body background color to black font color to white, and font to arial*/
+body {background-color:black;font-family: arial;color:white}
+/*Set h1 color to grey, font to Verdana, and align center*/
+h1{color:grey;font-family:Verdana; text-align: center}
+
+/*Set maindiv background color to white, text color to black, width to 500px,
+padding to 20px, border radius to 25 px (for rounded corners), and margin auto to auto center
+horizontally*/
+.maindiv{
+    background-color: white;
+    color:black;
+    width: 500px;
+    padding: 20px;
+    border-radius: 25px;
+    margin: auto;
+
+}
+/*Set innerdiv padding top and left to 10 px and 60 px to provide indentation*/
+.innerdiv{
+    padding-top: 10px;
+    padding-left: 60px;
+
+
+}
+/*Add spacing between the labels and the input elements and keep them aligned*/
+#principal {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 60px;
+}
+
+#rate {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 20px;
+}
+
+select {
+    height: 20px;
+    flex: 0 0 200px;
+    margin-left: 30px;
+}
+
+
+
+
+
+
